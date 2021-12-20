@@ -6,25 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Elixir Elector</title>
 </head>
-<body>
-   <h1>Elixir Elector</h1> 
-   <form onsubmit="getDrinkName(event)" value="">
-        <label>Enter the name of a drink:</label>
-        <input type="text" id="drinkName"> 
-        <input type="submit" id="btn">
-   </form>
-   <div id="imgDisplay"></div>
-   <div id="drinkResultDisplay">
-
-   </div>
-    
-<!-- minlength="4" 
-    maxlength="8" 
-    size="10"
-pattern="[a-z]{3,10}" -->
-
+<body class="bodyFont">
+    <div class="hero">
+        <h1>Elixir Elector</h1>
+        <h3>Search by drink name, first letter or enter "random" to get a random drink</h3>
+        <form onsubmit="getDrinkName(event)" value="">
+            <!-- <label>Enter the name of a drink:</label> -->
+            <input type="text" id="drinkName" class="textInput"> 
+            <input type="submit" id="btn" class="btn">
+       </form>
+    </div>
+    <div class="displayContainer">
+        <div id="imgDisplay"></div>
+        <div id="drinkResultGrid3"></div>
+        <div id="drinkResultGrid4"></div>
+        <div id="drinkResultGrid5"></div>
+    </div>
+   
 </body>
 
 </html>

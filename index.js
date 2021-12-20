@@ -1,5 +1,7 @@
 const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/'
-const drinkResult = document.getElementById('drinkResultDisplay');
+const drinkResult3 = document.getElementById('drinkResultGrid3');
+const drinkResult4 = document.getElementById('drinkResultGrid4');
+const drinkResult5 = document.getElementById('drinkResultGrid5');
 const imgResult = document.getElementById('imgDisplay');
 
 const getDrinkName = (event) => {
@@ -20,6 +22,7 @@ const getDrinkName = (event) => {
 const drinkByLetter = async (query) => {
     const response = await axios.get(`${baseUrl}search.php?f=${query}`);
     console.log("response.data.drinks by letter", response.data.drinks);
+    // how can I loop over the response and pull out the data that I want for each drink?
     for (let drinks in response) {
         console.log(`${response[drinks].strDrink}`)
     }
@@ -28,6 +31,7 @@ const drinkByLetter = async (query) => {
 const getDrinks = async (query) => {
         const response = await axios.get(`${baseUrl}search.php?s=${query}`);
         if (response.data.drinks !== null) {
+            // how can I loop over the response and pull out the data that I want for each drink?
             console.log("getDrinks response is not null", response.data.drinks)
         } else {
             console.log("whoops, better check your spelling and try again. Heres a random drink on the house.")
@@ -49,16 +53,17 @@ const randomDrink = async () => {
     const ingred3 = response.data.drinks[0].strIngredient3
     const ingred4 = response.data.drinks[0].strIngredient4
     const ingred5 = response.data.drinks[0].strIngredient5
+    const instructions = response.data.drinks[0].strInstructions
     // how can this part be simplified/built dynamically using a loop?
     console.log("response.data.drinks", response.data.drinks);
-    drinkResult.innerHTML = `<h3>${drinkName}</h3> 
-    <p>${drinkType}</p>
-    <p>${glassType}</p>
+    drinkResult3.innerHTML = `<h2>${drinkName}</h2><p>${drinkType}</p><p>${glassType}</p>`
+    drinkResult4.innerHTML = `
     <p>${ingred1}</p>
     <p>${ingred2}</p>
     <p>${ingred3}</p>
     <p>${ingred4}</p>
     <p>${ingred5}</p>`
+    drinkResult5.innerHTML= `<div class="grid5"><p>${instructions}</p></div>`
     imgResult.innerHTML = `<img src=${drinkImg}>`
 }
 

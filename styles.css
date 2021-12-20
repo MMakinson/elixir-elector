@@ -1,0 +1,96 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #707B7C;
+    color: white
+}
+
+.hero {
+    padding: 10em;
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 5em;
+    color: white;
+    text-shadow: 0 0 2px grey;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+}
+form {
+    text-align: center;
+}
+
+.btn{
+    font-family: 'Roboto', sans-serif;
+    background-color:aqua;
+    padding: 1em;
+    width: 9em;
+    border: 0
+}
+
+.textInput {
+    padding: 1em;
+    width: 20em;
+    border: 1px solid grey;
+}
+
+/* button:hover {
+    border-left-width: 5px;
+  }
+  
+  button:active {
+    border-color: rgb(123, 20, 80);
+  }
+  
+  button:focus {
+    outline: 0;
+  } */
+
+.displayContainer {
+    display: grid;
+    grid-template-columns: 5em 22em 15em 15em 31em 5em;
+    grid-template-rows: auto;
+    border: 2px solid green;
+    grid-template-areas: 
+    "main main main main"
+    "footer footer footer footer";
+}
+
+#imgDisplay {
+    grid-column-start: 2;
+}
+
+#drinkResultGrid3 {
+    vertical-align: bottom;
+    grid-column-start: 3;
+
+}
+
+h2 {
+    line-height: 6em;
+}
+
+#drinkResultGrid4 {
+    grid-column-start: 4;
+
+}
+
+.drinkResultGrid5 {
+    grid-column-start: 5;
+    line-height: 6em;
+}
+
+img {
+    height: 20em;
+    width: auto;
+    border: 8px solid white;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    box-shadow: none;
+}
