@@ -24,12 +24,21 @@ form {
     text-align: center;
 }
 
+.centerBtn {
+    text-align: center;
+}
+
 .btn{
     font-family: 'Roboto', sans-serif;
     background-color:aqua;
     padding: 1em;
     width: 9em;
     border: 0
+}
+
+#errorDiv {
+    color: #A3081D;
+    font-weight: 700;
 }
 
 .textInput {
@@ -52,21 +61,27 @@ form {
 
 .displayContainer {
     display: grid;
-    grid-template-columns: 5em 22em 15em 15em 31em 5em;
+    grid-template-columns: 22em 15em 31em;
     grid-template-rows: auto;
     border: 2px solid green;
     grid-template-areas: 
     "main main main main"
     "footer footer footer footer";
+    margin-bottom: 400px;
+    width: 80%;
+    margin: 0 auto;
 }
 
+/* .centerDiv {
+    margin: 0 auto;
+} */
 #imgDisplay {
-    grid-column-start: 2;
+    grid-column-start: 1;
 }
 
-#drinkResultGrid3 {
-    vertical-align: bottom;
-    grid-column-start: 3;
+#drinkResultGrid2 {
+    /* vertical-align: bottom; */
+    grid-column-start: 2;
 
 }
 
@@ -74,14 +89,9 @@ h2 {
     line-height: 6em;
 }
 
-#drinkResultGrid4 {
-    grid-column-start: 4;
+#drinkResultGrid3 {
+    grid-column-start: 3;
 
-}
-
-.drinkResultGrid5 {
-    grid-column-start: 5;
-    line-height: 6em;
 }
 
 img {

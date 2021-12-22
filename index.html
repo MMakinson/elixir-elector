@@ -14,18 +14,23 @@
 <body class="bodyFont">
     <div class="hero">
         <h1>Elixir Elector</h1>
-        <h3>Search by drink name, first letter or enter "random" to get a random drink</h3>
-        <form onsubmit="getDrinkName(event)" value="">
-            <!-- <label>Enter the name of a drink:</label> -->
-            <input type="text" id="drinkName" class="textInput"> 
-            <input type="submit" id="btn" class="btn">
-       </form>
+        <h3>Click the button to generate a random drink</h3>
+        <div class="centerBtn">
+            <button id='btn' class="btn textInput">Elect my Elixir!</button>
+        </div>
+        <!-- <h3>Search by drink name, first letter or enter "random" to get a random drink</h3> -->
+        <!-- <form onsubmit="getInputValue(event)" value="">
+            <-- <input type="text" id="drinkName" class="textInput">  -->
+            <!-- <input type="submit" id="btn" class="btn">
+       </form> --> 
+        <!-- <div id="errorDiv"></div> -->
     </div>
     <div class="displayContainer">
-        <div id="imgDisplay"></div>
-        <div id="drinkResultGrid3"></div>
-        <div id="drinkResultGrid4"></div>
-        <div id="drinkResultGrid5"></div>
+            <div id="imgDisplay"></div>
+            <div id="drinkResultGrid2">
+                <ul id="ingredUL"></ul>
+            </div>
+            <div id="drinkResultGrid3"></div> 
     </div>
    
 </body>
