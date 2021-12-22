@@ -1,12 +1,33 @@
 const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/'
 
+let showImg;
+console.log('what is showImg initialized', showImg)
+let drinkName;
+console.log('what is drinkName initialized', drinkName)
+let ingredList;
+console.log('what is ingredList initialized', ingredList)
+let drinkInst;
+console.log('what is drinkInst initialized', drinkInst)
 
-
+// let clearDrink =[];
 const button = document.querySelector('#btn')
 button.addEventListener('click', () => {
+    // clearDrink.length = 0;
+    // console.log("what is clear drink after clearing", clearDrink)
+    if (showImg) {
+        showImg.remove()
+    }
+    if (drinkName) {
+        drinkName.remove()
+    }
+    if (ingredList) {
+        ingredList.remove()
+    }
+    if (drinkInst) (
+        drinkInst.remove()
+    )
     randomDrink()
 })
-    
 
 const randomDrink = async () => {
     const response = await axios.get(`${baseUrl}random.php`);
@@ -15,23 +36,27 @@ const randomDrink = async () => {
     results.forEach((result) => {
         
         // img display grid (grid #2)
-        let showImg = document.createElement('img')
+        showImg = document.createElement('img')
         document.getElementById('imgDisplay').appendChild(showImg)
         showImg.setAttribute('src', result.strDrinkThumb)
-        
-        let resultDiv = document.createElement('div')
+        // clearDrink.push(showImg)
+        // console.log('clearDrinkArray', clearDrink)
         
         // create h2 for drink title and add text for title, add it to the drinkResultGrid3
-        let drinkName = document.createElement("h2")
+        drinkName = document.createElement("h2")
         drinkName.innerText = result.strDrink
         document.getElementById('drinkResultGrid2').appendChild(drinkName);
         console.log('what is drinkName', drinkName)
+        // clearDrink.push(drinkName)
+        // console.log('clearDrinkArray', clearDrink)
 
 
         // grab the UL element and append the li's to it for ingredients
-        let ingredList = document.createElement('ul')
+        ingredList = document.createElement('ul')
         document.getElementById('drinkResultGrid2').appendChild(ingredList)
         console.log('what is ingredlist', ingredList)
+        // clearDrink.push(ingredList)
+        // console.log('clearDrinkArray', clearDrink)
 
             if(result.strIngredient1) {
                 let ingred1 = document.createElement('li')
@@ -80,10 +105,12 @@ const randomDrink = async () => {
             }
             
             // create p tag to hold instruction info, put retrieved instruction data as text in p tag, append it to the drinkResultGrid4 div
-            let drinkInst = document.createElement('p')
+            drinkInst = document.createElement('p')
             drinkInst.innerText = result.strInstructions
             document.getElementById('drinkResultGrid3').appendChild(drinkInst)
             console.log('what is drinkInst', drinkInst)
+            // clearDrink.push(drinkInst)
+            // console.log('clearDrinkArray', clearDrink)
     })
 }
 

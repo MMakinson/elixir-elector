@@ -61,7 +61,7 @@ form {
 
 .displayContainer {
     display: grid;
-    grid-template-columns: 22em 15em 31em;
+    grid-template-columns: 22em 22em 31em;
     grid-template-rows: auto;
     border: 2px solid green;
     grid-template-areas: 
@@ -86,7 +86,12 @@ form {
 }
 
 h2 {
-    line-height: 6em;
+    /* line-height: 6em; */
+    margin-top: 20%;
+    margin-left: 1em;
+}
+ul {
+    margin-top: 0;
 }
 
 #drinkResultGrid3 {
