@@ -5,7 +5,7 @@ body {
 }
 
 .hero {
-    padding: 10em;
+    padding: 5em;
 }
 
 h1 {
@@ -20,9 +20,6 @@ h3 {
     text-align: center;
     color: white;
 }
-form {
-    text-align: center;
-}
 
 .centerBtn {
     text-align: center;
@@ -36,16 +33,70 @@ form {
     border: 0
 }
 
+.displayContainer {
+    display: grid;
+    grid-template-columns: 25em 50em;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "main main main";
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+#imgDisplay {
+    grid-column-start: 1;
+    margin-left: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#drinkResultGrid2 {
+    grid-column-start: 2;
+}
+
+h2 {
+    margin-top: 3em;
+}
+
+ul {
+    margin-top: 2em;
+    list-style-type: none;
+    font-style: italic;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+}
+
+#drinkResultGrid3 {
+    grid-column-start: 3;
+}
+
+p {
+    max-width: 50em;
+    margin-top: 3em;
+}
+
+img {
+    height: 20em;
+    width: auto;
+    border: 8px solid white;
+    border-radius: 4px;
+}
+
+/* input[type="submit"] {
+    box-shadow: none;
+}
+
 #errorDiv {
     color: #A3081D;
     font-weight: 700;
-}
+} */
 
-.textInput {
+/* .textInput {
     padding: 1em;
     width: 20em;
     border: 1px solid grey;
-}
+} */
 
 /* button:hover {
     border-left-width: 5px;
@@ -59,53 +110,6 @@ form {
     outline: 0;
   } */
 
-.displayContainer {
-    display: grid;
-    grid-template-columns: 22em 22em 31em;
-    grid-template-rows: auto;
-    border: 2px solid green;
-    grid-template-areas: 
-    "main main main main"
-    "footer footer footer footer";
-    margin-bottom: 400px;
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* .centerDiv {
-    margin: 0 auto;
+  /* form {
+    text-align: center;
 } */
-#imgDisplay {
-    grid-column-start: 1;
-}
-
-#drinkResultGrid2 {
-    /* vertical-align: bottom; */
-    grid-column-start: 2;
-
-}
-
-h2 {
-    /* line-height: 6em; */
-    margin-top: 20%;
-    margin-left: 1em;
-}
-ul {
-    margin-top: 0;
-}
-
-#drinkResultGrid3 {
-    grid-column-start: 3;
-
-}
-
-img {
-    height: 20em;
-    width: auto;
-    border: 8px solid white;
-    border-radius: 4px;
-}
-
-input[type="submit"] {
-    box-shadow: none;
-}
